@@ -1,2 +1,4 @@
 ﻿.vscode/*
 build/*
+plugins/template/visionEngine/bscv/bin/*
+plugins/template/visionEngine/bscv/lib/*
