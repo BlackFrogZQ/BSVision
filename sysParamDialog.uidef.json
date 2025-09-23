@@ -1,0 +1,98 @@
+{
+    "UiDef": {
+        "sysParamDialog": {
+            "Type": "Dialog",
+            "ObjectName": "sysParamDialog",
+            "Margin": "1",
+            "Spacing": "10",
+            "Title": "Machine Settings",
+            "Geometry": "(${desktop_width} - 900)*0.5, (${desktop_height} - 600)*0.5 - 300, 900, 600",
+            "ShowFunc": [
+                "sysParamDialog.sysParaWidget->readPara()"
+            ],
+            "AcceptFunc": [
+                "sysParamDialog.sysParaWidget->savePara()"
+            ],
+            "RejectFunc": [
+                "sysParamDialog.sysParaWidget->cancelChangePara()"
+            ],
+            "WidgetList": [
+                "sysParaWidget",
+                "BottomBtnFrame"
+            ],
+            "ToolBtnList": [
+                "ExportBtn",
+                "ImportBtn",
+                "OpenParaFolderBtn"
+            ],
+            "ExportBtn": {
+                "Type": "ToolButton",
+                "Text": "Export Para",
+                "Tip": "Export Para",
+                "ObjectName": "CustomDialogTitleBarBtn",
+                "IconPath": {
+                    "Normal": ":res/Export.png",
+                    "Disabled": ":res/Export.png"
+                }
+            },
+            "ImportBtn": {
+                "Type": "ToolButton",
+                "Text": "Import Para",
+                "Tip": "Import Para",
+                "ObjectName": "CustomDialogTitleBarBtn",
+                "IconPath": {
+                    "Normal": ":res/Import.png",
+                    "Disabled": ":res/Import.png"
+                }
+            },
+            "OpenParaFolderBtn": {
+                "Type": "ToolButton",
+                "Text": "Open Para Folder",
+                "Tip": "Open Para Folder",
+                "ObjectName": "CustomDialogTitleBarBtn",
+                "IconPath": {
+                    "Normal": ":res/Folder.png",
+                    "Disabled": ":res/Folder.png"
+                }
+            },
+            "BottomBtnFrame": {
+                "Type": "BtnFrame",
+                "ObjectName": "BottomBtnFrame",
+                "Margin": "10",
+                "Spacing": "10",
+                "Orientation": "Horizontal",
+                "WidgetList": [
+                    "BottomSpacer",
+                    "FuncRestoreBtn",
+                    "FuncSaveBtn",
+                    "FuncCancelBtn"
+                ],
+                "Visible": "true"
+            },
+            "BottomSpacer": {
+                "Type": "Spacer",
+                "ObjectName": "BottomSpacer",
+                "SizePolicy": {
+                    "Hor": "Expanding"
+                }
+            },
+            "FuncRestoreBtn": {
+                "Type": "PushButton",
+                "Text": "Restore"
+            },
+            "FuncSaveBtn": {
+                "Type": "PushButton",
+                "Text": "Save"
+            },
+            "FuncCancelBtn": {
+                "Type": "PushButton",
+                "Text": "Cancel"
+            },
+            "sysParaWidget": {
+                "Type": "ParaWidget",
+                "ObjectName": "sysParaWidget",
+                "ParaItemKey": "globalDef"
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "globalDef": {
+        "Type": "treeItem",
+        "Items": {
+            "a_sys_paras": {
+                "Type": "groupItem",
+                "GridLayout": {
+                    "c_user_paras": "2,0,1,1",
+                    "d_ui_permissions_paras": "2,1,1,1"
+                },
+                "Items": {
+                    "c_user_paras": {
+                        "Text": "User Paras",
+                        "Type": "groupItem",
+                        "ShowTitleLable": true,
+                        "Items": {
+                            "a_user_def": {
+                                "Text": "User Def",
+                                "Type": "valueItem",
+                                "ValueType": "strValue",
+                                "DefaultValue": "Operator,Administrator",
+                                "CtrlShowParas": "false"
+                            },
+                            "b_operator": {
+                                "Text": "Operator",
+                                "Type": "valueItem",
+                                "ValueType": "passwordValue",
+                                "DefaultValue": "123456",
+                                "CtrlShowParas": "${currentUserId} >= 0"
+                            },
+                            "b_administrator": {
+                                "Text": "Administrator",
+                                "Type": "valueItem",
+                                "ValueType": "passwordValue",
+                                "DefaultValue": "123456",
+                                "CtrlShowParas": "${currentUserId} >= 1"
+                            }
+                        }
+                    },
+                    "d_ui_permissions_paras": {
+                        "Text": "Title Btn Permis",
+                        "Type": "groupItem",
+                        "ShowTitleLable": true,
+                        "Items": {
+                            "a_mainwidget_btn": {
+                                "Text": "${name} Btn",
+                                "Type": "valueItem",
+                                "ValueType": "pemisinsValue",
+                                "DefaultValue": "1",
+                                "CtrlEnableParas": "${currentUserId} >= 1",
+                                "ListAttributes": {
+                                    "_a_camera_config": {
+                                        "${name}": "Camera Config"
+                                    },
+                                    "_b_new_file": {
+                                        "${name}": "New File"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

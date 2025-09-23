@@ -1,0 +1,40 @@
+{
+    "ServiceMapDef": {
+        "RestoreBtnMap": {
+            "SendObj": "sysParamDialog.BottomBtnFrame.FuncRestoreBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "sysParamDialog.sysParaWidget",
+            "SlotMethod": "restorePara()"
+        },
+        "SaveBtnMap": {
+            "SendObj": "sysParamDialog.BottomBtnFrame.FuncSaveBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "sysParamDialog",
+            "SlotMethod": "accept()"
+        },
+        "CancelBtnMap": {
+            "SendObj": "sysParamDialog.BottomBtnFrame.FuncCancelBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "sysParamDialog",
+            "SlotMethod": "reject()"
+        },
+        "ImportParaBtnMap": {
+            "SendObj": "sysParamDialog.ImportBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "sysParamDialog.sysParaWidget",
+            "SlotMethod": "importPara()"
+        },
+        "ExportParaBtnMap": {
+            "SendObj": "sysParamDialog.ExportBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "sysParamDialog.sysParaWidget",
+            "SlotMethod": "exportPara()"
+        },
+        "OpenParaFolderBtnMap": {
+            "SendObj": "sysParamDialog.OpenParaFolderBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "sysParamDialog.sysParaWidget",
+            "SlotMethod": "openParaFolder()"
+        }
+    }
+}

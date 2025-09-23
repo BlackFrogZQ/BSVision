@@ -1,0 +1,129 @@
+{
+    "UiDef": {
+        "mainwindow": {
+            "ObjectName": "mainwindow",
+            "IsMsgboxReceiver": "true",
+            "WidgetList": [
+                "TitleToolBar"
+            ],
+            "TitleToolBar": {
+                "IsTitleBar": "true",
+                "Type": "ToolBar",
+                "ObjectName": "TitleToolBar",
+                "IconSize": "32, 32",
+                "Spacing": "10",
+                "Margin": "2",
+                "ToolBarArea": "TopToolBarArea",
+                "WidgetList": [
+                    "TitleLogoLabel",
+                    "NewFile",
+                    "ImportFile",
+                    "ExportFile",
+                    "TitleTextLabel",
+                    "TitleSpacer",
+                    "UserBtn",
+                    "SysParamBtn",
+                    "AboutBtn",
+                    "MinWndBtn",
+                    "ExitSysBtn"
+                ]
+            },
+            "TitleLogoLabel": {
+                "Type": "Label",
+                "ObjectName": "TitleLogoLabel",
+                "PixPath": ":res/AppIcon.png"
+            },
+            "NewFile": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "Tip": "New File",
+                "IconPath": {
+                    "Normal": ":res/newFile.png",
+                    "Disabled": ":res/newFile.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            },
+            "ImportFile": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "Tip": "Import File",
+                "IconPath": {
+                    "Normal": ":res/Import.png",
+                    "Disabled": ":res/Import.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            },
+            "ExportFile": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "Tip": "Export File",
+                "IconPath": {
+                    "Normal": ":res/Export.png",
+                    "Disabled": ":res/Export.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            },
+            "TitleTextLabel": {
+                "Type": "Label",
+                "ObjectName": "TitleTextLabel",
+                "Text": "Main Window Test",
+                "TextSelectable": "true",
+                "PercentPos": "0.5"
+            },
+            "TitleSpacer": {
+                "Type": "Spacer",
+                "ObjectName": "TitleSpacer",
+                "SizePolicy": {
+                    "Hor": "Expanding",
+                    "Ver": "Expanding"
+                }
+            },
+            "UserBtn": {
+                "Type": "ToolButton",
+                "ObjectName": "TitleUserBtn",
+                "Text": "Unknown",
+                "IconPath": {
+                    "Normal": ":res/SignIn.png",
+                    "Disabled": ":res/SignOut.png"
+                },
+                "ToolButtonStyle": "ToolButtonTextBesideIcon"
+            },
+            "SysParamBtn": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "IconPath": {
+                    "Normal": ":res/SysParam.png",
+                    "Disabled": ":res/SysParam.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            },
+            "AboutBtn": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "IconPath": {
+                    "Normal": ":res/About.png",
+                    "Disabled": ":res/About.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            },
+            "MinWndBtn": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "IconPath": {
+                    "Normal": ":res/MinWnd.png",
+                    "Disabled": ":res/MinWnd.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            },
+            "ExitSysBtn": {
+                "Type": "ToolButton",
+                "ObjectName": "ToolBarBtn",
+                "IconPath": {
+                    "Normal": ":res/ExitSys.png",
+                    "Disabled": ":res/ExitSys.png"
+                },
+                "ToolButtonStyle": "ToolButtonIconOnly"
+            }
+        }
+    }
+}

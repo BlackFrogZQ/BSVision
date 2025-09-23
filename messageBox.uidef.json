@@ -1,0 +1,54 @@
+{
+    "UiDef": {
+        "MessageBox": {
+            "UnsavedMsgBox": {
+                "Type": "MessageBox",
+                "Title": "Unsaved Para Box",
+                "Text": "The para is unsaved, do you want to save?",
+                "MessageBoxIcon": "Question",
+                "StandardButtons": "Save|Discard"
+            },
+            "ExitAppMsgBox": {
+                "Type": "MessageBox",
+                "Title": "Exit App Box",
+                "Text": "Do you want to exit the system?",
+                "MessageBoxIcon": "Question",
+                "StandardButtons": "Yes|No"
+            },
+            "RestoreParaMsgBox": {
+                "Type": "MessageBox",
+                "Title": "Restore Para Box",
+                "Text": "Do you want to set it to default parameters?",
+                "MessageBoxIcon": "Question",
+                "MessageBoxPixmap": ":res/AppIcon.png",
+                "MessageBoxPixmapSize": "50,50",
+                "StandardButtons": "Yes|No"
+            },
+            "RestartAppMsgBox": {
+                "Type": "MessageBox",
+                "Title": "Restart App Box",
+                "Text": "Your configured settings require a restart of the application to take effect. Would you like to restart now?",
+                "MessageBoxIcon": "Question",
+                "MessageBoxPixmap": ":res/AppIcon.png",
+                "MessageBoxPixmapSize": "50,50",
+                "StandardButtons": "Yes|No"
+            },
+            "CameraConfigSaveIpMsgBox": {
+                "Type": "MessageBox",
+                "Title": "Save IPv4 Box",
+                "Text": "Target IPv4 is not saved, do you want to save it?",
+                "MessageBoxIcon": "Question",
+                "MessageBoxPixmap": ":res/AppIcon.png",
+                "MessageBoxPixmapSize": "50,50",
+                "StandardButtons": "Save|Discard|Cancel"
+            },
+            "SystemUnsavedMsgBox": {
+                "Type": "MessageBox",
+                "Title": "System Unsaved Para Box",
+                "Text": "The para is unsaved, do you want to save?",
+                "MessageBoxIcon": "Question",
+                "StandardButtons": "Save|Discard|Cancel"
+            }
+        }
+    }
+}

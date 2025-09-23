@@ -1,0 +1,58 @@
+{
+    "ServiceMapDef": {
+        "MainWindowNewFileMap": {
+            "SendObj": "mainwindow.TitleToolBar.NewFile",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "engineService",
+            "SlotMethod": "newFile()"
+        },
+        "MainWindowImportFileMap": {
+            "SendObj": "mainwindow.TitleToolBar.ImportFile",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "engineService",
+            "SlotMethod": "importFile()"
+        },
+        "MainWindowExportFileMap": {
+            "SendObj": "mainwindow.TitleToolBar.ExportFile",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "engineService",
+            "SlotMethod": "exportFile()"
+        },
+        "MainWindowExitMap": {
+            "SendObj": "mainwindow.TitleToolBar.ExitSysBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "engineService",
+            "SlotMethod": "exitMsgBoxSys()"
+        },
+        "MainWindowOnlyShowMap": {
+            "SendObj": "engineService",
+            "SigMethod": "sigOnlyShow(bool)",
+            "ReceiverObj": "mainwindow",
+            "SlotMethod": "onlyShowCenterWidget(bool)"
+        },
+        "MainWindowMinWndBtnMap": {
+            "SendObj": "mainwindow.TitleToolBar.MinWndBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "mainwindow",
+            "SlotMethod": "showMinimized()"
+        },
+        "MainWindowAboutBtnMap": {
+            "SendObj": "mainwindow.TitleToolBar.AboutBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "bsAppService",
+            "SlotMethod": "aboutSys()"
+        },
+        "MainWindowUserBtnMap": {
+            "SendObj": "mainwindow.TitleToolBar.UserBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "bsAppService",
+            "SlotMethod": "showLoginDialog()"
+        },
+        "MainWindowSysParamBtnMap": {
+            "SendObj": "mainwindow.TitleToolBar.SysParamBtn",
+            "SigMethod": "clicked()",
+            "ReceiverObj": "bsAppService",
+            "SlotMethod": "showParamDialog()"
+        }
+    }
+}

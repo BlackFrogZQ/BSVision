@@ -1,0 +1,826 @@
+QMainWindow {
+    border: 1px solid rgb(54, 56, 60);
+    background-color: rgb(40, 40, 40);
+}
+
+QMainWindow::separator {
+    background-color: rgb(60, 60, 60);
+    height: 2px;
+}
+
+QDialog {
+    border: 1px solid rgb(54, 56, 60);
+    background-color: rgb(40, 40, 40);
+}
+
+QDialog#LogDialog {
+    min-height: 800px;
+    max-height: 800px;
+    min-width: 1000px;
+    max-width: 1000px;
+}
+
+QDialog#LoginDialog {
+    min-height: 800px;
+    max-height: 800px;
+    min-width: 1000px;
+    max-width: 1000px;
+}
+
+QWidget#SearchWidget {
+    background-color: rgb(40, 40, 40);
+    border: 1px solid rgb(120, 120, 120);
+    min-height: 25px;
+    max-height: 25px;
+}
+
+QToolBar {
+    background-color: transparent;
+    border: 0px solid rgb(120, 120, 120);
+    min-height: 30px;
+}
+
+QToolBar#TitleToolBar {
+    background-color: rgb(40, 40, 40);
+    min-height: 50px;
+    border: 1px solid rgb(54, 56, 60);
+    min-width: 300px;
+}
+
+QToolBar#CustomDialogTitleBar {
+    background-color: rgb(40, 40, 40);
+    border-bottom: 1px solid rgb(54, 56, 60);
+    min-height: 50px;
+}
+
+QToolBar#CustomMainAlarmBox{
+    background-color: rgb(89,31,31);
+    min-height:36px;
+    max-height:36px;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    spacing: 3px;
+    min-width: 300px;
+}
+
+QLineEdit#CustomMainAlarmBoxLineEdit {
+    font: bold 16px;
+    background-color:transparent;
+    color: rgb(220,220,139);
+    min-height: 30px;
+    max-height: 30px;
+    border: none;
+    padding: 0px;
+}
+
+QPushButton#CustomMainAlarmBoxBtn {
+    font: bold 16px;
+    min-height: 30px;
+    max-height: 30px;
+    background-color: rgb(40,40,40);
+    color: rgb(240, 240, 240);
+}
+
+BS_QT_Ui--CCustomRangeSlider {
+    border: none;
+    font-family: 'Microsoft YaHei';
+    font: 13px;
+    padding:0px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(40, 40, 40);
+}
+
+BS_QT_Ui--CCustomSlider QDoubleSpinBox {
+    min-width: 10px;
+}
+
+QToolButton {
+    border: none;
+    font-family: 'Microsoft YaHei';
+    font: 13px;
+    padding:0px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(40, 40, 40);
+}
+
+QToolButton:disabled {
+    color: rgb(120, 120, 120);
+    padding:0px;
+}
+
+QToolButton:hover {
+    background-color: rgb(60, 60, 60);
+    padding: 1px;
+}
+
+QToolButton::menu-button
+{
+    background-color:transparent;
+}
+
+QToolButton#ToolBarBtn {
+    min-width: 56px;
+    max-width: 56px;
+    min-height: 48px;
+    max-height: 48px;
+    padding:0px;
+}
+
+QToolButton#CustomDialogTitleBarBtn {
+    min-width: 56px;
+    max-width: 56px;
+    min-height: 48px;
+    max-height: 48px;
+    padding:0px;
+}
+
+QLabel {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(240, 240, 240);
+}
+
+QLabel#TitleTextLabel {
+    font: 600 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+    qproperty-alignment: AlignCenter;
+    min-width: 100px;
+    background-color: rgb(255, 60, 60);
+}
+
+QLabel#CustomDialogTitleLabel {
+    font: 600 16px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+QLabel#TitleLogoLabel {
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+QLabel#CustomDialogTitleBarIcon {
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 32px;
+    max-height: 32px;
+}
+
+QLabel#ManualInfoLabel {
+    font: bold 16px;
+    color: rgb(240, 240, 240);
+}
+
+QLabel#GroupTitleLabel {
+    font: bold 14px;
+    min-height: 16px;
+    max-height: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+QLabel#DialogTitleLabel {
+    color: rgb(200, 200, 200);
+}
+
+
+QLabel#CustomToolTip {
+    background-color: rgba(255, 229, 132, 100);
+    padding: 10px;
+    border-radius:5px;
+    color: rgb(34, 34, 37);
+}
+
+QLabel#FtsofeStdDialogQRCodeLable {
+    min-width: 240px;
+    max-width: 240px;
+    background-color: transparent;
+}
+
+QLabel#FtsofeStdDialoEmpowerLable {
+    font: bold 13px;
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 200px;
+    background-color: rgb(0, 180, 0);
+    color: rgb(220,220,139);
+    border-bottom: 1px solid rgb(54, 56, 60);
+}
+
+QLabel#FtsofeStdDialoEmpowerLable:disabled {
+    background-color: rgb(89,31,31);
+}
+
+QDialog#FtsofeStdDialog {
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 800px;
+    max-width: 800px;
+}
+
+QTextEdit#FtsofeStdDialogInfoTextEdit {
+    font: bold 13px;
+    border: 1px solid rgb(56, 58, 61);
+}
+
+QListWidget#ParaListWidget {
+    font: bold 14px;
+    font-family: 'Microsoft YaHei';
+    max-width: 180px;
+    color: rgb(240, 240, 240);
+}
+
+QListWidget#ParaListWidget::item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+QListWidget::item:hover {
+    background-color: rgb(40, 80, 150);
+}
+
+QListWidget::item:selected {
+    background-color: rgb(60, 160, 230);
+}
+
+QListWidget::item:selected:!active {
+    color: rgb(240, 240, 240);
+    background-color: rgb(60, 160, 230);
+}
+
+QSpinBox {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    min-width: 100px;
+    max-width: 160px;
+    border: 1px solid rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
+    background-color: rgb(27, 30, 35);
+}
+
+QDoubleSpinBox {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    min-width: 100px;
+    max-width: 160px;
+    border: 1px solid rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
+    background-color: rgb(27, 30, 35);
+}
+
+QCheckBox {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(225, 225, 225);
+    min-height: 22px;
+}
+
+QCheckBox:disabled {
+    color: rgb(180, 180, 180);
+}
+
+QCheckBox::indicator{
+    width: 32px;
+    height: 22px;
+}
+
+QCheckBox::indicator:unchecked{
+    image: url(:res/CheckOff.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(:res/CheckOn.png);
+}
+
+QHeaderView {
+    background-color: transparent;
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+}
+
+QHeaderView::section {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(240, 240, 240);
+    background-color: rgb(40, 40, 40);
+}
+
+QTableCornerButton::section {
+    color: rgb(250, 250, 250);
+    background-color: rgb(40, 40, 40);
+}
+
+QListView {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    background-color: rgb(30, 30, 30);
+    border: 1px solid rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
+}
+
+QListView::item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+QListView#ParaComboBoxListView::item {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: rgb(240, 240, 240);
+}
+
+QListView#TitleComboBoxListView {
+    font-family: 'Microsoft YaHei';
+    font: 14px;
+}
+
+QTreeView {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    background-color: rgb(30, 30, 30);
+    color: rgb(240, 240, 240);
+    border: 1px solid rgb(60, 60, 60);
+}
+
+QTreeView::item:selected:!active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(63, 63, 70);
+}
+
+QSplitter::handle {
+    background-color: rgb(40, 40, 40);
+}
+
+QPushButton {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    background-color: transparent;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 6px;
+    color: rgb(240, 240, 240);
+    min-height: 30px;
+    min-width: 90px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QPushButton:hover {
+    background-color: rgb(54, 56, 60);
+}
+
+QPushButton:pressed {
+    background-color: rgb(64, 66, 70);
+}
+
+QPushButton:disabled {
+    background-color: rgb(35, 38, 43);
+    color: rgb(73, 73, 73);
+}
+
+QToolButton#StdPushBtnStyleToolBtn {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    background-color: transparent;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 6px;
+    color: rgb(240, 240, 240);
+    min-height: 30px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QToolButton#StdPushBtnStyleToolBtn:hover {
+    background-color: rgb(54, 56, 60);
+}
+
+QToolButton#StdPushBtnStyleToolBtn:pressed {
+    background-color: rgb(64, 66, 70);
+}
+
+QToolButton#StdPushBtnStyleToolBtn:disabled {
+    background-color: rgb(35, 38, 43);
+    color: rgb(73, 73, 73);
+}
+
+QLineEdit {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 2px;
+    background-color: rgb(27, 30, 35);
+    color: rgb(240, 240, 240);
+    min-height: 30px;
+}
+
+QLineEdit:disabled {
+    border: none;
+    background-color: transparent;
+}
+
+QLineEdit#SearchEditLine {
+    min-width: 80px;
+    max-width: 160px;
+}
+
+QComboBox {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    background-color: rgb(27, 30, 35);
+    color: rgb(240, 240, 240);
+    border: 1px solid rgb(60, 60, 60);
+    border-radius: 2px;
+    text-align: center;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    border-left-width: 0px;
+}
+
+QComboBox::down-arrow {
+    image: url(:res/DownArrow.png);
+}
+
+QScrollBar:vertical {
+    background-color: rgb(34, 34, 37);
+    width: 8px;
+}
+
+QScrollBar::handle:vertical {
+    border-radius: 4px;
+    width: 8px;
+    min-height: 20px;
+    background: rgb(200, 200, 200);
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgb(200, 200, 200);
+}
+
+QScrollBar::add-page:vertical {
+    background: none;
+}
+
+QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar::add-line:vertical {
+    background: none;
+}
+
+QScrollBar::sub-line:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background-color: rgb(34, 34, 37);
+    height: 8px;
+}
+
+QScrollBar::handle:horizontal {
+    border-radius: 4px;
+    height: 8px;
+    background: rgb(50, 52, 56);
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: rgb(62, 64, 67);
+}
+
+QScrollBar::add-page:horizontal {
+    background: none;
+}
+
+QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+QScrollBar::add-line:horizontal {
+    background: none;
+}
+
+QScrollBar::sub-line:horizontal {
+    background: none;
+}
+
+QSlider::groove:vertical {
+    border: 0px solid rgb(50, 50, 50);
+    background-color: rgb(128, 128, 128);
+    width: 8px;
+    border-radius: 2px;
+    padding-left: -1px;
+    padding-right: -1px;
+    padding-top: -1px;
+    padding-bottom: -1px;
+}
+
+QSlider::sub-page:vertical {
+    background-color: rgb(128, 128, 128);
+    border: 0px solid rgb(200, 200, 200);
+    border-radius: 2px;
+}
+
+QSlider::add-page:vertical {
+    background: rgb(0, 180, 0);
+    border: 0px solid rgb(200, 200, 200);
+    width: 10px;
+    border-radius: 2px;
+}
+
+QSlider::handle:vertical {
+    background: rgb(210, 210, 210);
+    height: 20px;
+    border-radius: 10px;
+
+    margin-left: -6px;
+    margin-right: -6px;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+QTextEdit {
+    font-family: '微软雅黑';
+    font: 12px;
+    background-color: transparent;
+    border: 0px solid rgb(56, 58, 61);
+    border-radius: 0px;
+    color: rgb(200, 200, 200);
+}
+
+QTreeWidget#ParaItemTreeWidget {
+    font: bold 13px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px solid rgb(220, 220, 220);
+    min-width: 150px;
+    max-width: 150px;
+}
+
+QTreeWidget#ParaItemTreeWidget::item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+QTreeWidget#ParaItemTreeWidget::item:hover:!selected {
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 232, 255);
+}
+
+QTreeWidget#ParaItemTreeWidget::item:selected {
+    color: rgb(254, 254, 254);
+    background-color: rgb(80, 180, 250);
+}
+
+QTreeWidget#LogDialogTreeWidget {
+    font: bold 13px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 0px;
+    border: 0px solid rgb(220, 220, 220);
+    min-width: 150px;
+    max-width: 150px;
+}
+
+QTreeWidget#LogDialogTreeWidget::item {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+QTreeWidget#LogDialogTreeWidget::item:hover:!selected {
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 232, 255);
+}
+
+QTreeWidget#LogDialogTreeWidget::item:selected {
+    color: rgb(254, 254, 254);
+    background-color: rgb(80, 180, 250);
+}
+
+QScrollArea {
+    border: 0px solid rgb(80, 80, 80);
+    background-color: transparent;
+}
+
+QStackedWidget {
+    border: 0px solid rgb(220, 220, 220);
+    background-color: transparent;
+}
+
+QFrame#ParaItemTreeStackFrame {
+    border: 0px solid rgb(220, 220, 220);
+    background-color: transparent;
+}
+
+QFrame#ParaItemGroupFrame {
+    border: 0px solid rgb(60, 60, 60);
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+QWidget#ParaItemWidget {
+    background-color: transparent;
+}
+
+QFrame#CParaWidget {
+    border: 0px solid rgb(60, 60, 60);
+    border-radius: 0px;
+    background-color: rgb(40, 40, 40);
+}
+
+QLabel#ParaItemGroupTitleLable {
+    font: bold 13px;
+    min-height: 26px;
+    max-height: 26px;
+    min-width: 180px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(54, 56, 60);
+}
+
+QLabel#ParaItemTitleLable {
+    font: bold 12px;
+    min-height: 26px;
+    max-height: 26px;
+    min-width: 150px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: transparent;
+}
+
+QLabel#ParaItemTreeStackTitleLabel {
+    font: bold 16px;
+    min-height: 26px;
+    max-height: 26px;
+    padding-top: 4px;
+    padding-bottom: 6px;
+    background-color: transparent;
+    border-bottom: 1px solid rgb(218, 219, 220);
+}
+
+QLineEdit#ParaItemValueLineEdit {
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 26px;
+    max-height: 26px;
+}
+
+QLineEdit#ParaItemValuePathLineEdit {
+    min-width: 150px;
+    min-height: 26px;
+    max-height: 26px;
+    margin-left: 25px;
+}
+
+QComboBox#ParaItemValueComboBox {
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 26px;
+    max-height: 26px;
+    text-align: right;
+}
+
+QComboBox#ParaItemValueComboBox:disabled {
+    background-color: transparent;
+    border: none;
+}
+
+QComboBox#ParaItemValueComboBox::drop-down:disabled {
+    width:0px;
+    border: none;
+}
+
+QComboBox#ParaItemValueComboBox::down-arrow:disabled {
+    image: none;
+}
+
+QLabel#ParaItemValueNumLabel {
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 26px;
+    max-height: 26px;
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    border: 1px solid rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
+    background-color: rgb(27, 30, 35);
+}
+
+QLabel#ParaItemValueNumLabel:disabled {
+    border: none;
+    background-color: transparent;
+}
+
+QDoubleSpinBox#ParaItemValueNumSpinBox {
+    background-color: transparent;
+    border: none;
+}
+
+QDoubleSpinBox#ParaItemValueMatSpinBox {
+    min-width: 70px;
+    max-width: 70px;
+}
+
+QDoubleSpinBox#ParaItemValueMatSpinBox:disabled {
+    background-color: transparent;
+    border: none;
+}
+
+QToolTip {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    border: 1px solid rgb(60, 60, 60);
+    color: rgb(240, 240, 240);
+    background-color: rgb(27, 30, 35);
+    border-radius: 5px;
+}
+
+QMenu
+{
+    background-color: rgb(27, 30, 35);
+    color: rgb(240, 240, 240);
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    border: none;
+    margin: 0px;
+    spacing:3px;
+}
+
+QMenu::separator
+{
+    background-color: rgb(210, 210, 210);
+    height: 1px;
+    margin-left: 14px;
+    margin-right: 4px;
+}
+
+QMenu::item
+{
+    padding:0px 0px;
+    margin:3px;
+    border: none;
+}
+
+QMenu::item:selected{
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 232, 255);
+}
+
+QMenu::item:disabled
+{
+    color: rgb(180, 180, 180);
+    background-color: transparent;
+}
+
+QGroupBox{
+    background-color: transparent;
+    color: rgb(240, 240, 240);
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+}
+
+QSplashScreen#CustomSplashScreen {
+    font: 12px;
+    font-family: 'Microsoft YaHei';
+    color: rgb(240, 240, 240);
+    qproperty-textColor: rgb(240, 240, 240);
+    qproperty-textMargin: 5;
+}
+
+QTableWidget {
+    min-width: 240px;
+    max-width: 240px;
+    border-bottom: 1px solid rgb(218, 219, 220);
+    outline:none;
+    background-color: transparent;
+    color: rgb(240, 240, 240);
+}
+
+QTableWidget::item {
+    text-align: center;
+    border: none;
+    outline:none;
+    background: transparent;
+    color: rgb(240, 240, 240);
+}
+
+QTableWidget::item:selected {
+    color: rgb(254, 254, 254);
+    background-color: rgb(80, 180, 250);
+}
+
+QTableWidget::item:hover:!selected {
+    color: rgb(0, 0, 0);
+    background-color: rgb(204, 232, 255);
+}

@@ -1,0 +1,121 @@
+{
+  "globalDef": {
+    "Text": "globalParas",
+    "Type": "treeItem",
+    "Spacing": "10",
+    "Margin": "10",
+    "Items": {
+      "a_sys_paras": {
+        "Text": "SysParas",
+        "Type": "groupItem",
+        "VerSpacing": 20,
+        "HorSpacing": 50,
+        "GridLayout": {
+          "a_software_paras": "0,0,1,1",
+          "b_log_paras": "0,1,1,1",
+          "b_a_save_image_paras": "1,0,1,1"
+        },
+        "Items": {
+          "a_software_paras": {
+            "Text": "Software Paras",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "Items": {
+              "a_app_lang": {
+                "Text": "Software Language",
+                "Type": "valueItem",
+                "ValueType": "enumValue",
+                "DefaultValue": "Chinese",
+                "EnumType": "CVisionApplication::CLangType",
+                "SoftRestart": true
+              },
+              "b_app_vision_engine": {
+                "Text": "Vision Engine",
+                "Type": "valueItem",
+                "ValueType": "enumValue",
+                "DefaultValue": "HZGEngine",
+                "EnumType": "CVisionApplication::CEngineType",
+                "SoftRestart": true
+              }
+            }
+          },
+          "b_log_paras": {
+            "Text": "Log Paras",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "Items": {
+              "a_msg_normal_color": {
+                "Text": "Message Normal Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "240,240,240"
+              },
+              "b_msg_warning_color": {
+                "Text": "Message Warning Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "255,97,2"
+              },
+              "c_msg_error_color": {
+                "Text": "Message Error Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "161,0,0"
+              },
+              "d_msg_hint_color": {
+                "Text": "Message Hint Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "0,230,0"
+              },
+              "e_log_max_size": {
+                "Text": "Log Max Number",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "365",
+                "Decimals": 0,
+                "Max": 1000,
+                "Min": 0,
+                "Unit": "Day"
+              }
+            }
+          },
+          "b_a_save_image_paras": {
+            "Text": "Save Image Paras",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "CtrlEnableParas": "${currentUserId} >= 1",
+            "Items": {
+              "a_save_path": {
+                "Text": "Save Path",
+                "Type": "valueItem",
+                "ValueType": "filePathValue",
+                "DefaultValue": "./grabImage"
+              },
+              "b_save_max_count": {
+                "Text": "Max Number",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "500",
+                "Decimals": 0,
+                "Max": 99999,
+                "Min": 50,
+                "Unit": "Pic"
+              },
+              "c_save_max_time": {
+                "Text": "Max Storage Time",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "365",
+                "Decimals": 0,
+                "Max": 1000,
+                "Min": 0,
+                "Unit": "Day"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
