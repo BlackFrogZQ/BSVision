@@ -1,8 +1,10 @@
 #include "mainWidget.h"
 #include "../qssDef.h"
-#include "service/serviceManager.h"
 #include "cameraCreate.h"
 #include "system/camera.h"
+#include "service/serviceManager.h"
+#include "ui/workWidget/stdWorkWidget.h"
+#include "ui/projectEditWidget/projectEditWidget.h"
 
 #include "Ui/uiManager.h"
 #include "message/msgManager.h"
@@ -40,8 +42,10 @@ void CHzgMainWidget::initLayout()
     m_pWorkWindow = new CStdWorkWidget(this);
     m_pWorkWindow->init();
     m_pWorkWindow->initLayout();
+    m_pProjectEditWidget = new CProjectEditWidget(this);
 
     m_pTagWidget = new BS_QT_Ui::CCustomTabWidget(this);
+
     auto pTagCornerCameraBtn = m_pTagWidget->addCornerBtn(tr("Camera"));
     connect(pTagCornerCameraBtn, &QToolButton::clicked, this, [this]
             {
@@ -54,14 +58,11 @@ void CHzgMainWidget::initLayout()
                     CUIManager::moveToCenter(pDialog);
                     pDialog->exec();
                     pDialog->deleteLater(); });
-
-    connect(
-        visionCamera(), &BS_Hal_Camera::ICameraControl::sigStateChanged, this, [this, pCameraBtn = pTagCornerCameraBtn](BS_Hal_Camera::CCameraStateInfo p_stateInfo)
-        { pCameraBtn->setChecked(p_stateInfo.isConnected); },
-        Qt::QueuedConnection);
+    connect(visionCamera(), &BS_Hal_Camera::ICameraControl::sigStateChanged, this, [this, pCameraBtn = pTagCornerCameraBtn](BS_Hal_Camera::CCameraStateInfo p_stateInfo)
+        { pCameraBtn->setChecked(p_stateInfo.isConnected); }, Qt::QueuedConnection);
 
     m_pTagWidget->addTab(m_pWorkWindow, cWorkTagName);
-    m_pTagWidget->addTab(new QLabel(cProjectEditTagName), cProjectEditTagName);
+    m_pTagWidget->addTab(m_pProjectEditWidget, cProjectEditTagName);
 
     QVBoxLayout *pLayout = new QVBoxLayout(this);
     pLayout->addWidget(m_pTagWidget);

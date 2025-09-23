@@ -1,6 +1,11 @@
 add_subdirectory(graphicsView)
 add_subdirectory(imageWidget)
 add_subdirectory(workWidget)
+add_subdirectory(projectEditWidget)
+add_subdirectory(editLabel)
+add_subdirectory(iconTextButton)
+
 aux_source_directory(. DIR_SYSTEM_SRCS)
 add_library(pluginUiLib STATIC ${DIR_SYSTEM_SRCS})
-target_link_libraries(pluginUiLib PUBLIC workWidgetLib imageWidgetLib graphicsViewLib)
+
+target_link_libraries(pluginUiLib PUBLIC workWidgetLib imageWidgetLib graphicsViewLib projectEditWidgetLib editLabelLib iconTextButtonLib)

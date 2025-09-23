@@ -68,5 +68,13 @@
     <file>res/graphics/itemContextMenu/setting.png</file>
     <file>res/newFile.png</file>
     <file>res/nextFind.png</file>
+    <file>res/projectEditWidget/Cancel.png</file>
+    <file>res/projectEditWidget/del.png</file>
+    <file>res/projectEditWidget/edit.png</file>
+    <file>res/projectEditWidget/feature.png</file>
+    <file>res/projectEditWidget/new.png</file>
+    <file>res/projectEditWidget/save.png</file>
+    <file>res/projectEditWidget/saveAs.png</file>
+    <file>res/projectEditWidget/station.png</file>
     </qresource>
 </RCC>

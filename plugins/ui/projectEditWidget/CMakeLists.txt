@@ -1,0 +1,4 @@
+add_subdirectory(stationWidget)
+aux_source_directory(. DIR_SYSTEM_SRCS)
+add_library(projectEditWidgetLib ${DIR_SYSTEM_SRCS})
+target_link_libraries(projectEditWidgetLib PUBLIC stationWidgetLib)
