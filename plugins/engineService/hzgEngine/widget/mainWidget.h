@@ -1,9 +1,9 @@
 #pragma once
 #include <QWidget>
 #include "Ui/widget/tabWidget.h"
-#include "ui/workWidget/stdWorkWidget.h"
 
-
+class CProjectEditWidget;
+class CStdWorkWidget;
 class CHzgMainWidget : public QWidget
 {
     Q_OBJECT
@@ -18,6 +18,7 @@ protected:
 public:
     BS_QT_Ui::CCustomTabWidget *m_pTagWidget;
     CStdWorkWidget *m_pWorkWindow;
+    CProjectEditWidget *m_pProjectEditWidget;
 };
 
 CHzgMainWidget *hzgMainWindow();

@@ -37,6 +37,7 @@ protected:
     virtual bool initStateManager() override;
     virtual bool checkRunEnvironment() override;
     virtual void registRcc() override;
+    void sfds();
 
 protected:
     QMetaObject::Connection m_showLoginOnceConnection;

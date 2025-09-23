@@ -36,7 +36,16 @@
         #define cGraphicsEllipseIcon ":res/graphics/drawShape/ellipse.png"
         #define cGraphicsPathIcon ":res/graphics/drawShape/path.png"
         #define cGraphicsLineIcon ":res/graphics/drawShape/line.png"
-#pragma endregion
+
+        #define cProjectEditCancelIcon ":res/projectEditWidget/Cancel.png"
+        #define cProjectEditNewIcon ":res/projectEditWidget/new.png"
+        #define cProjectEditSaveIcon ":res/projectEditWidget/save.png"
+        #define cProjectEditSaveAsIcon ":res/projectEditWidget/saveAs.png"
+        #define cProjectEditEditIcon ":res/projectEditWidget/edit.png"
+        #define cProjectEditDelIcon ":res/projectEditWidget/del.png"
+        #define cProjectEditFeatureIcon ":res/projectEditWidget/feature.png"
+        #define cProjectEditStationIcon ":res/projectEditWidget/station.png"
+        #pragma endregion
 
 #pragma region "core参数"
     #define cEngineType "globaldef.a_sys_paras.a_software_paras.b_app_vision_engine"
