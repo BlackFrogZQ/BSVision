@@ -1,0 +1,209 @@
+{
+  "globalDef": {
+    "Text": "globalParas",
+    "Type": "treeItem",
+    "Spacing": 10,
+    "Margin": 10,
+    "Items": {
+      "c_camera": {
+        "Text": "${name} Camera Paras",
+        "Type": "groupItem",
+        "HorSpacing": 50,
+        "VerSpacing": 20,
+        "GridLayout": {
+          "a_config": "0,0,1,2",
+          "b_exposureTime": "1,0,1,1",
+          "c_gamma": "2,0,1,1",
+          "d_gainRaw": "2,1,1,1"
+        },
+        "ListAttributes": {
+          "0": {
+            "${name}": "Vision"
+          },
+          "1": {
+            "${name}": "Focus"
+          }
+        },
+        "Items": {
+          "a_config": {
+            "Text": "ConfigParas",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "HorSpacing": 20,
+            "GridLayout": {
+              "a_type": "0,0,1,1",
+              "b_ip": "1,0,1,1",
+              "c_heartbeatTime": "2,0,1,1",
+              "d_reverseX": "0,1,1,1",
+              "e_reverseY": "1,1,1,1",
+              "f_swapXY": "2,1,1,1"
+            },
+            "Items": {
+              "a_type": {
+                "Text": "Type",
+                "Type": "valueItem",
+                "ValueType": "enumValue",
+                "DefaultValue": "cctVirtual",
+                "EnumType": "BSHalCamera::CCameraType",
+                "CtrlEnableParas": "0"
+              },
+              "b_ip": {
+                "Text": "Ipv4",
+                "Type": "valueItem",
+                "ValueType": "strValue",
+                "DefaultValue": "169.254.169.99",
+                "CtrlEnableParas": "0"
+              },
+              "c_heartbeatTime": {
+                "Text": "Heartbeat Time",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "5000",
+                "Decimals": 0,
+                "Max": 10000,
+                "Min": 1000,
+                "Unit": "ms"
+              },
+              "d_reverseX": {
+                "Text": "Hor Flip",
+                "Type": "valueItem",
+                "ValueType": "boolValue",
+                "DefaultValue": "0"
+              },
+              "e_reverseY": {
+                "Text": "Ver Flip",
+                "Type": "valueItem",
+                "ValueType": "boolValue",
+                "DefaultValue": "0"
+              },
+              "f_swapXY": {
+                "Text": "Swap Hor Ver",
+                "Type": "valueItem",
+                "ValueType": "boolValue",
+                "DefaultValue": "0"
+              }
+            }
+          },
+          "b_exposureTime": {
+            "Text": "ExposureParas",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "Items": {
+              "a_value": {
+                "Text": "Exposure Time",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "10000",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 1,
+                "Scale": 0.001,
+                "Unit": "ms",
+                "CtrlEnableParas": "0"
+              },
+              "b_minValue": {
+                "Text": "Min Exposure Time",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "1",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 1,
+                "Scale": 0.001,
+                "Unit": "ms"
+              },
+              "c_maxValue": {
+                "Text": "Max Exposure Time",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "1000000",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 1,
+                "Scale": 0.001,
+                "Unit": "ms"
+              }
+            }
+          },
+          "c_gamma": {
+            "Text": "GammaParas",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "Items": {
+              "a_value": {
+                "Text": "Value",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "1",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 0,
+                "CtrlEnableParas": "0"
+              },
+              "b_minValue": {
+                "Text": "Min Gamma Vaule",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "0",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 0,
+                "CtrlEnableParas": "0"
+              },
+              "c_maxValue": {
+                "Text": "Min Gamma Vaule",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "1000000",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 0,
+                "CtrlEnableParas": "0"
+              }
+            }
+          },
+          "d_gainRaw": {
+            "Text": "GainRawParas",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "Items": {
+              "a_value": {
+                "Text": "Value",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "0",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 0,
+                "Unit": "db",
+                "CtrlEnableParas": "0"
+              },
+              "b_minValue": {
+                "Text": "Min GainRaw Vaule",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "0",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 0,
+                "Unit": "db",
+                "CtrlEnableParas": "0"
+              },
+              "c_maxValue": {
+                "Text": "Min GainRaw Vaule",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "1000000",
+                "Decimals": 3,
+                "Max": 1000000,
+                "Min": 0,
+                "Unit": "db",
+                "CtrlEnableParas": "0"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

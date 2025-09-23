@@ -1,0 +1,70 @@
+#include "mainWidget.h"
+#include "../qssDef.h"
+#include "service/serviceManager.h"
+#include "cameraCreate.h"
+#include "system/camera.h"
+
+#include "Ui/uiManager.h"
+#include "message/msgManager.h"
+
+#include <QLabel>
+#include <QToolButton>
+#include <QTabWidget>
+#include <QVBoxLayout>
+using namespace BS_QT_Ui;
+
+CHzgMainWidget *hzgMainWindow()
+{
+    return qobject_cast<CHzgMainWidget *>(BS_QT_Service::CServiceManager::GetService(cHzgMainWidget));
+}
+
+#define cWorkTagName QObject::tr("Workspace")
+#define cProjectEditTagName QObject::tr("Mark Editing")
+CHzgMainWidget::CHzgMainWidget(QWidget *p) : QWidget(p)
+{
+    setObjectName(cHzgMainWidget);
+    BS_QT_Service::CServiceManager::RegistService(cHzgMainWidget, this);
+}
+
+CHzgMainWidget::~CHzgMainWidget()
+{
+}
+
+void CHzgMainWidget::init()
+{
+    initLayout();
+}
+
+void CHzgMainWidget::initLayout()
+{
+    m_pWorkWindow = new CStdWorkWidget(this);
+    m_pWorkWindow->init();
+    m_pWorkWindow->initLayout();
+
+    m_pTagWidget = new BS_QT_Ui::CCustomTabWidget(this);
+    auto pTagCornerCameraBtn = m_pTagWidget->addCornerBtn(tr("Camera"));
+    connect(pTagCornerCameraBtn, &QToolButton::clicked, this, [this]
+            {
+                    if (visionCamera()->isAcquire())
+                    {
+                        Out_SyncMsgBox << tr("The camera is in use and cannot be configured");
+                        return;
+                    }
+                    auto pDialog = BS_Hal_Camera::CCameraCreater::newConfigCameraDialog(VisionCameraID,this);
+                    CUIManager::moveToCenter(pDialog);
+                    pDialog->exec();
+                    pDialog->deleteLater(); });
+
+    connect(
+        visionCamera(), &BS_Hal_Camera::ICameraControl::sigStateChanged, this, [this, pCameraBtn = pTagCornerCameraBtn](BS_Hal_Camera::CCameraStateInfo p_stateInfo)
+        { pCameraBtn->setChecked(p_stateInfo.isConnected); },
+        Qt::QueuedConnection);
+
+    m_pTagWidget->addTab(m_pWorkWindow, cWorkTagName);
+    m_pTagWidget->addTab(new QLabel(cProjectEditTagName), cProjectEditTagName);
+
+    QVBoxLayout *pLayout = new QVBoxLayout(this);
+    pLayout->addWidget(m_pTagWidget);
+    pLayout->setMargin(1);
+    pLayout->setSpacing(0);
+}

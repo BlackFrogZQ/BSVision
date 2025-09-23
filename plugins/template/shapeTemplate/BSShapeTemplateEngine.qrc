@@ -1,0 +1,18 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource>
+    <file>shapeTemplateRes/boolean/intersection.png</file>
+    <file>shapeTemplateRes/boolean/subtraction.png</file>
+    <file>shapeTemplateRes/boolean/union.png</file>
+    <file>shapeTemplateRes/del.png</file>
+    <file>shapeTemplateRes/edit.png</file>
+    <file>shapeTemplateRes/grabImage.png</file>
+    <file>shapeTemplateRes/posTool/ellipseCenter.png</file>
+    <file>shapeTemplateRes/posTool/lineCenter.png</file>
+    <file>shapeTemplateRes/posTool/rectCenter.png</file>
+    <file>shapeTemplateRes/posTool/rightAngle.png</file>
+    <file>shapeTemplateRes/posTool/templateCenter.png</file>
+    <file>shapeTemplateRes/posTool/twoCircleCenter.png</file>
+    <file>shapeTemplateRes/shape.png</file>
+    <file>shapeTemplateRes/shapes.png</file>
+    </qresource>
+</RCC>

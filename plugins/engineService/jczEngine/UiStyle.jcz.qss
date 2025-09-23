@@ -1,0 +1,160 @@
+
+/* hzg */
+QTabWidget{
+    font-family: 'Microsoft YaHei';
+    font: 13px;
+    background-color:rgb(60,60,60);
+    border:none;
+}
+
+QTabWidget::pane{
+    background-color:rgb(60,60,60);
+    border:none;
+    top:-1px;
+}
+
+QTabWidget::tab-bar{
+    background-color:rgb(60,60,60);
+    alignment:left;
+    left:5px;
+    right:1px;
+    bottom:0px;
+}
+QTabBar::tab{
+    background-color:transparent;
+    height:30px;
+    width:35ex;
+    color:rgb(254, 254, 254);
+    border:none;
+}
+
+QTabBar::tab:selected{
+    background:rgb(60,60,60);
+}
+
+QToolButton#StdMainWidgetToolBtn {
+    min-width: 80px;
+    max-width: 80px;
+    border-radius:5px;
+    border:none;
+    padding:0px;
+    background-color: transparent;
+    qproperty-iconSize:30px 30px;
+}
+
+QToolButton#StdMainWidgetToolBtn::menu-indicator {
+    subcontrol-position: right center;
+}
+
+QToolButton#StdMainWidgetToolBtn:disabled {
+    color: rgb(120, 120, 120);
+    padding: 0px;
+}
+
+QToolButton#StdMainWidgetToolBtn:hover:enabled:!checked {
+    background-color: rgb(40, 40, 40);
+    padding: 1px;
+}
+
+QToolButton#StdMainWidgetToolBtn:checked{
+    background:rgb(0,255,0);
+    color:black;
+    padding: 0px;
+}
+
+QToolButton#StdMainWidgetToolBtn2 {
+    min-width: 30px;
+    border-radius:5px;
+    border:none;
+    padding:0px;
+    background-color: transparent;
+    qproperty-iconSize:30px 30px;
+}
+
+QToolButton#StdMainWidgetToolBtn2::menu-indicator {
+    subcontrol-position: right center;
+}
+
+QToolButton#StdMainWidgetToolBtn2:disabled {
+    color: rgb(120, 120, 120);
+    padding: 0px;
+}
+
+QToolButton#StdMainWidgetToolBtn2:hover:enabled:!checked {
+    background-color: rgb(60, 60, 60);
+    padding: 1px;
+}
+
+QToolButton#StdMainWidgetToolBtn2:checked{
+    background:rgb(0,255,0);
+    color:black;
+    padding: 0px;
+}
+
+QPushButton#JczMarkWidgetBtn {
+    min-height: 25px;
+    min-width: 30px;
+}
+
+QPushButton#JczMarkWidgetBtn:checked{
+    background:rgb(0,255,0);
+    color:black;
+}
+
+QGroupBox#JczMarkWidgetMarkCtrlGroupBox{
+    margin-top: 0.5em;
+    padding-top: 0.25em;
+    border-top: 1px solid rgb(54,56,60);
+}
+
+QGroupBox#JczMarkWidgetMarkCtrlGroupBox::title{
+    subcontrol-origin:margin;
+    subcontrol-position:top center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QGroupBox#JczMarkWidgetMarkItemGroupBox{
+    margin-top: 0.5em;
+    padding-top: 0.25em;
+    border-radius: 4px;
+    border: 1px solid rgb(240,240,240);
+}
+
+QGroupBox#JczMarkWidgetMarkItemGroupBox::title{
+    subcontrol-origin:margin;
+    subcontrol-position:top center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+QFrame#JczMarkWidget{
+    min-width: 240px;
+    max-width: 240px;
+    border-bottom: 1px solid rgb(54,56,60);
+    background-color: rgb(40, 40, 40);
+}
+
+QListWidget#JczMarkWidgetListWidget {
+    outline:none;
+    background-color: transparent;
+}
+
+QListWidget#JczMarkWidgetListWidget::Item {
+    min-width: 220px;
+    max-width: 220px;
+    min-height: 90px;
+    max-height: 90px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 4px;
+}
+
+QListWidget#JczMarkWidgetListWidget::item:hover {
+    border: 1px solid rgb(204,232,255);
+}
+
+QListWidget#JczMarkWidgetListWidget::item:selected {
+    border: 1px solid rgb(60, 160, 230);
+}

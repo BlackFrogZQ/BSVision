@@ -1,0 +1,92 @@
+
+/* hzg */
+QTabWidget{
+    font-family: 'Microsoft YaHei';
+    font: 13px;
+    background-color:rgb(60,60,60);
+    border:none;
+}
+
+QTabWidget::pane{
+    background-color:rgb(60,60,60);
+    border:none;
+    top:-1px;
+}
+
+QTabWidget::tab-bar{
+    background-color:rgb(60,60,60);
+    alignment:left;
+    left:5px;
+    right:1px;
+    bottom:0px;
+}
+QTabBar::tab{
+    background-color:transparent;
+    height:30px;
+    width:35ex;
+    color:rgb(254, 254, 254);
+    border:none;
+}
+
+QTabBar::tab:selected{
+    background:rgb(60,60,60);
+}
+
+QToolButton#StdMainWidgetToolBtn {
+    min-width: 80px;
+    max-width: 80px;
+    border-radius:5px;
+    border:none;
+    padding:0px;
+    background-color: transparent;
+    qproperty-iconSize:30px 30px;
+}
+
+QToolButton#StdMainWidgetToolBtn::menu-indicator {
+    subcontrol-position: right center;
+}
+
+QToolButton#StdMainWidgetToolBtn:disabled {
+    padding:0px;
+    color: rgb(120, 120, 120);
+}
+
+QToolButton#StdMainWidgetToolBtn:hover:enabled:!checked {
+    background-color: rgb(40, 40, 40);
+    padding: 1px;
+}
+
+QToolButton#StdMainWidgetToolBtn:checked{
+    padding:0px;
+    background:rgb(0,255,0);
+    color:black;
+}
+
+QToolButton#StdMainWidgetToolBtn2 {
+    min-width: 30px;
+    border-radius:5px;
+    border:none;
+    padding:0px;
+    background-color: transparent;
+    qproperty-iconSize:30px 30px;
+}
+
+QToolButton#StdMainWidgetToolBtn2::menu-indicator {
+    subcontrol-position: right center;
+}
+
+QToolButton#StdMainWidgetToolBtn2:disabled {
+    color: rgb(120, 120, 120);
+    padding: 0px;
+}
+
+QToolButton#StdMainWidgetToolBtn2:hover:enabled:!checked {
+    background-color: rgb(60, 60, 60);
+    padding: 1px;
+}
+
+QToolButton#StdMainWidgetToolBtn2:checked{
+    background:rgb(0,255,0);
+    color:black;
+    padding: 0px;
+}

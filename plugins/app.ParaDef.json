@@ -1,0 +1,100 @@
+{
+  "globalDef": {
+    "Text": "globalParas",
+    "Type": "treeItem",
+    "Spacing": 10,
+    "Margin": 10,
+    "Items": {
+      "b_ui": {
+        "Text": "UiParas",
+        "Type": "groupItem",
+        "VerSpacing": 20,
+        "HorSpacing": 50,
+        "GridLayout": {
+          "a_graphics": "0,0,1,1",
+          "b_measure_paras": "0,1,1,1"
+        },
+        "Items": {
+          "a_graphics": {
+            "Text": "MarkItemParas",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "Items": {
+              "a_show_center_line": {
+                "Text": "CentLer Line",
+                "Type": "valueItem",
+                "ValueType": "boolValue",
+                "DefaultValue": "true",
+                "SoftRestart": true
+              },
+              "b_show_center_line_color": {
+                "Text": "Line Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "255,0,0",
+                "SoftRestart": true,
+                "CtrlShowParas": "${globaldef.b_ui.a_graphics.a_show_center_line} == true"
+              },
+              "c_used_mark_item": {
+                "Text": "Mark Item",
+                "Type": "valueItem",
+                "ValueType": "boolValue",
+                "DefaultValue": "false",
+                "SoftRestart": true
+              },
+              "d_mark_item_line_color": {
+                "Text": "Item Line Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "255,0,0",
+                "SoftRestart": true,
+                "CtrlShowParas": "${globaldef.b_ui.a_graphics.c_used_mark_item} == true"
+              },
+              "e_mark_item_point_color": {
+                "Text": "Item Point Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "0,0,255",
+                "SoftRestart": true,
+                "CtrlShowParas": "${globaldef.b_ui.a_graphics.c_used_mark_item} == true"
+              },
+              "f_roi_line_color": {
+                "Text": "ROI Line Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "255,0,0",
+                "SoftRestart": true
+              }
+            }
+          },
+          "b_measure_paras": {
+            "Text": "MeasureParas",
+            "Type": "groupItem",
+            "ShowTitleLable": true,
+            "CtrlShowParas": "${globaldef.a_sys_paras.a_software_paras.b_app_vision_engine} == JCZEngine",
+            "Items": {
+              "a_color": {
+                "Text": "Text Color",
+                "Type": "valueItem",
+                "ValueType": "colorValue",
+                "DefaultValue": "240,240,240",
+                "SoftRestart": true
+              },
+              "b_pixSize": {
+                "Text": "mm per pixel",
+                "Type": "valueItem",
+                "ValueType": "numberValue",
+                "DefaultValue": "1.0",
+                "Decimals": 3,
+                "Max": 10,
+                "Min": 0.001,
+                "Unit": "mm",
+                "CtrlEnableParas": "0"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
