@@ -1,4 +1,5 @@
 ﻿.vscode/*
 build/*
+grabImage/*
 plugins/template/visionEngine/bscv/bin/*
 plugins/template/visionEngine/bscv/lib/*

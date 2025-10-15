@@ -50,6 +50,9 @@
     <file>res/eyeOff.png</file>
     <file>res/eyeOn.png</file>
     <file>res/graphics/background.png</file>
+    <file>res/graphics/booleanOperation/intersection.png</file>
+    <file>res/graphics/booleanOperation/subtraction.png</file>
+    <file>res/graphics/booleanOperation/union.png</file>
     <file>res/graphics/cursor/cross.png</file>
     <file>res/graphics/cursor/rot.png</file>
     <file>res/graphics/cursor/sizeLeftRight.png</file>
@@ -66,6 +69,16 @@
     <file>res/graphics/itemContextMenu/Top.png</file>
     <file>res/graphics/itemContextMenu/Upper.png</file>
     <file>res/graphics/itemContextMenu/setting.png</file>
+    <file>res/graphics/toolBar/exposureTime.png</file>
+    <file>res/graphics/toolBar/grabImage.png</file>
+    <file>res/graphics/toolBar/maxSize.png</file>
+    <file>res/graphics/toolBar/minSize.png</file>
+    <file>res/graphics/toolShape/ellipseCenter.png</file>
+    <file>res/graphics/toolShape/lineCenter.png</file>
+    <file>res/graphics/toolShape/rectCenter.png</file>
+    <file>res/graphics/toolShape/rightAngle.png</file>
+    <file>res/graphics/toolShape/templatCenter.png</file>
+    <file>res/graphics/toolShape/twoCircleCenter.png</file>
     <file>res/newFile.png</file>
     <file>res/nextFind.png</file>
     <file>res/projectEditWidget/Cancel.png</file>

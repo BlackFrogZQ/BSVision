@@ -10,10 +10,14 @@ class CHzgMainWidget : public QWidget
 public:
     CHzgMainWidget(QWidget *p = nullptr);
     ~CHzgMainWidget();
+
     void init();
 
 protected:
     void initLayout();
+
+public slots:
+    void showOnlyEditWindow(bool p_only);
 
 public:
     BS_QT_Ui::CCustomTabWidget *m_pTagWidget;

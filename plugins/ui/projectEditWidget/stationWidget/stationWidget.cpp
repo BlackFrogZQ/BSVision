@@ -1,6 +1,8 @@
 ﻿#include "stationWidget.h"
 #include "featureIconButton.h"
 #include "pluginCoreDef.h"
+#include "../featureParaEdit/featureParaEdit.h"
+#include "../featureParaEdit/shapeTemplateEdit.h"
 
 #include "Ui/uiHelper.h"
 
@@ -77,6 +79,10 @@ void CStationWidget::setCanEdit(bool p_edit)
 
 void CStationWidget::slotNewFeature()
 {
+    IFeatureParaEdit *pFeatureParaEdit = new CShapeTemplateParaEdit(this);
+    emit sigEditFeature(pFeatureParaEdit);
+    connect(pFeatureParaEdit, &IFeatureParaEdit::sigClose, this, [pFeatureParaEdit]()
+    {delete pFeatureParaEdit;});
 }
 
 void CStationWidget::slotEditFeature(int p_id)

@@ -13,6 +13,7 @@
 #include <QToolButton>
 #include <QTabWidget>
 #include <QVBoxLayout>
+#include <QTabBar>
 using namespace BS_QT_Ui;
 
 CHzgMainWidget *hzgMainWindow()
@@ -42,6 +43,7 @@ void CHzgMainWidget::initLayout()
     m_pWorkWindow = new CStdWorkWidget(this);
     m_pWorkWindow->init();
     m_pWorkWindow->initLayout();
+
     m_pProjectEditWidget = new CProjectEditWidget(this);
 
     m_pTagWidget = new BS_QT_Ui::CCustomTabWidget(this);
@@ -63,9 +65,15 @@ void CHzgMainWidget::initLayout()
 
     m_pTagWidget->addTab(m_pWorkWindow, cWorkTagName);
     m_pTagWidget->addTab(m_pProjectEditWidget, cProjectEditTagName);
+    // m_pTagWidget->tabBar()->setVisible(false);
 
     QVBoxLayout *pLayout = new QVBoxLayout(this);
     pLayout->addWidget(m_pTagWidget);
     pLayout->setMargin(1);
     pLayout->setSpacing(0);
+}
+
+void CHzgMainWidget::showOnlyEditWindow(bool p_only)
+{
+
 }

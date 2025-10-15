@@ -13,14 +13,15 @@ add_subdirectory(system)
 add_subdirectory(ui)
 add_subdirectory(template)
 add_subdirectory(imageProcess)
+add_subdirectory(clipper2)
 
 add_subdirectory(engineService/hzgEngine)
 add_subdirectory(engineService/jczEngine)
 
 # add_custom_command(TARGET hzgEngine PRE_BUILD
 # COMMAND ${CMAKE_COMMAND} -E copy_directory ${bsCamera_RUNTIME_DIRS} )
-target_link_libraries(hzgEngine PRIVATE pluginUiLib pluginSystemLib templateLib imageProcessLib BS::Camera BS::Gui BS::Core ${Qt5model})
-target_link_libraries(jczEngine PRIVATE pluginUiLib pluginSystemLib templateLib imageProcessLib BS::Camera BS::Gui BS::Core ${Qt5model})
+target_link_libraries(hzgEngine PRIVATE pluginUiLib pluginSystemLib templateLib imageProcessLib clipper2Lib BS::Camera BS::Gui BS::Core ${Qt5model})
+target_link_libraries(jczEngine PRIVATE pluginUiLib pluginSystemLib templateLib imageProcessLib clipper2Lib BS::Camera BS::Gui BS::Core ${Qt5model})
 
 add_dependencies(${app} hzgEngine jczEngine)
 add_dependencies(${app} hzgEngine jczEngine)

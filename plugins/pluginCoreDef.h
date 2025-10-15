@@ -60,6 +60,8 @@
     #define cMarkItemPointColor "globaldef.b_ui.a_graphics.e_mark_item_point_color"
     #define cRoiItemLineColor "globaldef.b_ui.a_graphics.f_roi_line_color"
 
+    #define cUsedGainRaw "globaldef.c_camera.d_gainRaw.d_used_gainRaw"
+
     // 像素联动/测量
     #define cMeasureColor "globaldef.b_ui.b_measure_paras.a_color"
     #define cMeasurePixSize "globaldef.b_ui.b_measure_paras.b_pixSize"

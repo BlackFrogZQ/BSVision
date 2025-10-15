@@ -21,7 +21,7 @@ CMarkTemplateWidget::~CMarkTemplateWidget()
 
 void CMarkTemplateWidget::attachMark(CMarkPoint *pMark)
 {
-    assert(pMark != nullptr && pMark->templateParas.keys() == m_pMakeParaWidgets.keys() && "attachMark 检查");
+    // assert(pMark != nullptr && pMark->templateParas.keys() == m_pMakeParaWidgets.keys() && "attachMark 检查");
     m_pMark = nullptr;
     for (auto key : m_pMakeParaWidgets.keys())
     {

@@ -43,7 +43,7 @@
                 "Text": "Type",
                 "Type": "valueItem",
                 "ValueType": "enumValue",
-                "DefaultValue": "cctVirtual",
+                "DefaultValue": "cctHikvisionHikrobot",
                 "EnumType": "BSHalCamera::CCameraType",
                 "CtrlEnableParas": "0"
               },
@@ -199,6 +199,13 @@
                 "Min": 0,
                 "Unit": "db",
                 "CtrlEnableParas": "0"
+              },
+              "d_used_gainRaw": {
+                "Text": "usedGainRaw",
+                "Type": "valueItem",
+                "ValueType": "boolValue",
+                "DefaultValue": "true",
+                "SoftRestart": true
               }
             }
           }

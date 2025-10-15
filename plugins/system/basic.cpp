@@ -14,7 +14,7 @@ void initCamera()
     CParaManager::AddParaInfo(CAppFileHelper::appDirPath() + "/plugins/camera.ParaDef.json");
     CParaManager::AddParaInfo(CAppFileHelper::appDirPath() + "/plugins/app.ParaDef.json");
     CParaManager::load();
-    BS_Hal_Camera::CCameraCreater::createCamera(VisionCameraID, CEnumManager::getEnumInfo<BSHalCamera::CCameraType>(CParaManager::GetValue<QString>(cCameraConfigType(VisionCameraID)), BSHalCamera::cctVirtual));
+    BS_Hal_Camera::CCameraCreater::createCamera(VisionCameraID, CEnumManager::getEnumInfo<BSHalCamera::CCameraType>(CParaManager::GetValue<QString>(cCameraConfigType(VisionCameraID)), BSHalCamera::cctHikvisionHikrobot));
 }
 
 void updateCameraParas()
