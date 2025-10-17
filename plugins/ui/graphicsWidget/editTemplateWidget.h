@@ -1,4 +1,6 @@
 ﻿#pragma once
+#include "ui/graphicsView/graphics/sceneDef.h"
+#include "imageProcess/engineDef.h"
 #include "iGraphicsWidget.h"
 #include "Ui/widget/slider.h"
 
@@ -20,23 +22,23 @@ namespace TIGER_Graphics
 {
     class CTemplateScene;
 }
-namespace BS_2DVision_Template
-{
-    class CCreateTemplateParas;
-}
 class CEditTemplateWidget : public IGraphicsWidget
 {
     Q_OBJECT
 public:
     CEditTemplateWidget(QWidget *parent = nullptr);
     ~CEditTemplateWidget();
+    void setTemplateParas(CCreateTemplateParasOld *p_pTemplateCreateParas);
+    virtual void updateResult() override;
 
 public slots:
     void slotGrabImage();
 
 protected slots:
+    void slotDrawShapeFinished(TIGER_Graphics::CGraphicsBasicShape p_shape);
     void slotSetExposureTime();
     void slotReset();
+    void slotProcess();
 
 protected:
     void initToolActions();
@@ -55,5 +57,5 @@ protected:
     BS_QT_Ui::CCustomSlider *m_pPathWidthSlider;
     TIGER_Graphics::CTemplateScene* m_pItemScene;
     QPainterPath m_oldPath;
-    BS_2DVision_Template::CCreateTemplateParas* m_pTemplateCreateParas;
+    CCreateTemplateParasOld* m_pTemplateCreateParas;
 };

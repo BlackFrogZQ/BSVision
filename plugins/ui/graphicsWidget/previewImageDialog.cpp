@@ -3,8 +3,8 @@
 #include "system/camera.h"
 #include "ui/imageWidget/showImageWidget.h"
 
-#include "para/paraManager.h"
 #include "iCameraCtrl.h"
+#include "para/paraManager.h"
 #include "message/msgManager.h"
 
 #include <QMenu>

@@ -81,6 +81,8 @@
     <file>res/graphics/toolShape/twoCircleCenter.png</file>
     <file>res/newFile.png</file>
     <file>res/nextFind.png</file>
+    <file>res/para/close.png</file>
+    <file>res/para/open.png</file>
     <file>res/projectEditWidget/Cancel.png</file>
     <file>res/projectEditWidget/del.png</file>
     <file>res/projectEditWidget/edit.png</file>

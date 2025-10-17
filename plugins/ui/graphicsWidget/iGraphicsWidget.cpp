@@ -7,6 +7,7 @@
 #include <QHBoxLayout>
 #include <QMenu>
 #include <QToolBar>
+#include <QDoubleSpinBox>
 
 IGraphicsWidget::IGraphicsWidget(QWidget *parent) : QWidget(parent), m_pScene(nullptr), m_pView(nullptr)
 {
@@ -57,6 +58,10 @@ QLayout *IGraphicsWidget::getRightLayout()
 QLayout *IGraphicsWidget::getBottomLayout()
 {
     return nullptr;
+}
+
+void IGraphicsWidget::resetView()
+{
 }
 
 void IGraphicsWidget::contextMenuEvent(QContextMenuEvent *)
@@ -110,4 +115,27 @@ BS_QT_Ui::CCustomSlider *IGraphicsWidget::getSlider(double min, double max, doub
     pSlider->setRange(min, max);
     pSlider->setValue(value);
     return pSlider;
+}
+
+QSpinBox *IGraphicsWidget::getSpinBox(int min, int max, int value, int step)
+{
+    auto sb = new QSpinBox;
+    sb->setAlignment(Qt::AlignCenter);
+    sb->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    sb->setRange(min, max);
+    sb->setSingleStep(step);
+    sb->setValue(value);
+    return sb;
+}
+
+QDoubleSpinBox *IGraphicsWidget::getDoubleSpinBox(double min, double max, double value, double step)
+{
+    auto sb = new QDoubleSpinBox;
+    sb->setAlignment(Qt::AlignCenter);
+    sb->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+    sb->setDecimals(2);
+    sb->setRange(min, max);
+    sb->setSingleStep(step);
+    sb->setValue(value);
+    return sb;
 }
