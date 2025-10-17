@@ -31,29 +31,25 @@ void CProjectEditWidget::init()
 {
     m_pStationWidget = new CStationWidget(this);
 
-    m_pToolBar = new QLabel(this);
-    m_pToolBar->setObjectName("ProjectEditToolBarBar");
-    m_pToolBar->setStyleSheet("QLabel#ProjectEditToolBarBar{border:0px;border-bottom: 1px solid rgb(218, 219, 220);}");
+    // 采用与 Workspace 一致的工具栏容器与对象名
+    m_pToolBar = new QWidget(this);
+    m_pToolBar->setObjectName(cStdWorkWidgetToolBar);
     m_pToolBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    m_pToolBar->setMinimumHeight(56);
 
-    m_pStationToolBar = new QLabel(this);
-    m_pStationToolBar->setObjectName("ProjectEditStationToolBar");
+    m_pStationToolBar = new QWidget(this);
+    m_pStationToolBar->setObjectName(cStdWorkWidgetToolBar);
     m_pStationToolBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
-    m_pStationToolBar->setMinimumHeight(50);
 
     // 工具栏
     {
         auto getToolPb = [](QString p_name, QString p_icon, bool buttonStyle = true)
         {
             QToolButton *pToolButton = new QToolButton;
+            pToolButton->setObjectName(cStdMainWidgetToolBtn);
             pToolButton->setFocusPolicy(Qt::ClickFocus);
-            pToolButton->setStyleSheet(
-                QString("%1QToolButton:hover:!checked{background-color:rgb(210,220,230);border-radius:5px;}")
-                    .arg(buttonStyle ? "QToolButton{padding:0px;}" : "QToolButton{background:transparent;border:none;border-radius:5px;padding:0px;}"));
+            // 与 Workspace 相同的风格：文本在图标下方，由全局 QSS 控制
             pToolButton->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
             pToolButton->setIcon(QIcon(p_icon));
-            pToolButton->setIconSize(QSize(25, 25));
             pToolButton->setText(p_name);
             return pToolButton;
         };
@@ -84,6 +80,7 @@ void CProjectEditWidget::initToolBarLayout()
     layoutTemp->addWidget(m_pCancelButton);
     layoutTemp->addWidget(m_pStationToolBar);
     layoutTemp->addWidget(m_pNewStationButton);
+    layoutTemp->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
     layoutTemp->setSpacing(5);
     layoutTemp->setMargin(3);
     m_pToolBar->setLayout(layoutTemp);
@@ -112,7 +109,8 @@ void CProjectEditWidget::updateStationToolLayout()
     }
     layout->addWidget(m_pNewStationButton);
     layout->addStretch();
-    layout->setMargin(0);
+    layout->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    layout->setMargin(3);
     layout->setSpacing(5);
     m_pStationToolBar->setLayout(layout);
 }
@@ -155,9 +153,6 @@ bool CProjectEditWidget::eventFilter(QObject *obj, QEvent *e)
 
 void CProjectEditWidget::paintEvent(QPaintEvent *event)
 {
-    QPainter paint;
-    paint.begin(this);
-    paint.setRenderHint(QPainter::Antialiasing);
-    paint.fillRect(this->rect(), QColor(235, 244, 255));
+    // 使用全局样式，不再自绘背景，以匹配 Workspace 外观
     QWidget::paintEvent(event);
 }

@@ -1,10 +1,11 @@
 #include "templateHelper.h"
+#include "pluginCoreDef.h"
+
 #include "tool/saveFile.h"
 #include "para/paraManager.h"
 #include "service/serviceManager.h"
 #include "service/typeRegistrar.h"
 
-#include "pluginCoreDef.h"
 #include <QRegularExpression>
 #include <QPainter>
 namespace BS_2DVision_Template

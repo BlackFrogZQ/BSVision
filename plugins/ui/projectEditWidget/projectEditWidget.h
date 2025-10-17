@@ -4,6 +4,7 @@
 
 class QToolButton;
 class QLabel;
+class QWidget;
 class CProjectManager;
 class CIconTextButton;
 class CStationWidget;
@@ -34,8 +35,8 @@ protected:
     void stationContextMenu(CIconTextButton *pIconTextButton);
 
 protected:
-    QLabel *m_pToolBar;
-    QLabel *m_pStationToolBar;
+    QWidget *m_pToolBar;
+    QWidget *m_pStationToolBar;
 
     QToolButton *m_pSaveButton;
     QToolButton *m_pSaveAsButton;
