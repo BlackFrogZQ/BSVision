@@ -126,16 +126,7 @@ namespace TIGER_UIBasic
 
     void IDialog::paintEvent(QPaintEvent *event)
     {
-        QPainter paint;
-        paint.begin(this);
-        paint.setRenderHint(QPainter::Antialiasing);
-        QPainterPath path;
-        path.addRoundedRect(this->rect(), 5, 5);
-        // Qt默认颜色
-
-        paint.fillPath(path, QColor(235, 244, 255));
-        paint.setPen(QPen(QColor(197, 197, 197), 2));
-        paint.drawPath(path);
+        // 不再自绘浅色背景与边框，统一交由全局 QSS 控制（与 Workspace 风格一致）
         QDialog::paintEvent(event);
     }
 

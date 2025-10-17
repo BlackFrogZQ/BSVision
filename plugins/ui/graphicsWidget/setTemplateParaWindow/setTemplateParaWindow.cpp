@@ -25,11 +25,13 @@ void ISetTemplatePParaWindow::initLayout()
     pbLayout->addStretch();
     pbLayout->addWidget(pSave);
     pbLayout->addWidget(pCancel);
-    pbLayout->setMargin(0);
+    pbLayout->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    pbLayout->setMargin(3);
+    pbLayout->setSpacing(5);
     QVBoxLayout *hLayout = new QVBoxLayout;
     hLayout->addLayout(initPataLayout());
     hLayout->addLayout(pbLayout);
-    hLayout->setMargin(5);
+    hLayout->setMargin(0);
     hLayout->setSpacing(0);
     this->setLayout(hLayout);
 }

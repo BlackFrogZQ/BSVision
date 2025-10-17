@@ -107,8 +107,9 @@ void CPreviewImageDialog::init()
     pLayout3->addStretch();
     pLayout3->addWidget(pGrabImage);
     pLayout3->addWidget(pExit);
-    pLayout3->setMargin(0);
-    pLayout3->setSpacing(2);
+    pLayout3->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
+    pLayout3->setMargin(3);
+    pLayout3->setSpacing(5);
 
     QVBoxLayout *pLayout2 = new QVBoxLayout;
     pLayout2->addWidget(m_pImageWidget);
