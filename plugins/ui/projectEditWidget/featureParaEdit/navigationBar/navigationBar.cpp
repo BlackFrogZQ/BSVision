@@ -7,17 +7,15 @@
 #include <QPushButton>
 #include <QLabel>
 #include <QHBoxLayout>
+#include <QStyle>
 
-const QString cPbNormalStyle =
-    "";
-const QString cPbCurrentStyle =
-    "background:rgb(193, 255, 193);";
+// 使用全局 QSS + 动态属性来控制选中态，不再使用硬编码样式
+const char* cNavBtnObjectName = "NavigationBarBtn";
 
 CNavigationBar::CNavigationBar(QWidget *parent)
     : QWidget(parent), m_currentId(-1), m_editMaxId(0)
 {
     this->setFixedHeight(30);
-    this->setStyleSheet(cPbNormalStyle);
     initLayout();
 }
 
@@ -51,6 +49,7 @@ void CNavigationBar::addPage(const QString &p_name)
     }
 
     QPushButton *pButton = TIGER_UIBasic::noKeyPushButton(p_name);
+    pButton->setObjectName(cNavBtnObjectName);
     pButton->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     connect(pButton, &QPushButton::clicked, this, [id = m_pPbList.size(), this]
             { emit slotButtonGroupClicked(id); });
@@ -69,6 +68,7 @@ void CNavigationBar::insertPage(const int &p_id, const QString &p_name)
         m_pLabelList.append(pLabel);
     }
     QPushButton *pButton = TIGER_UIBasic::noKeyPushButton(p_name);
+    pButton->setObjectName(cNavBtnObjectName);
     pButton->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     m_pPbList.insert(p_id, {p_name, pButton});
     for (int i = 0; i < m_pPbList.size(); i++)
@@ -166,13 +166,18 @@ void CNavigationBar::slotButtonGroupClicked(int p_id)
     {
         int oldId = m_currentId;
         m_currentId = p_id;
-        for (auto pW : m_pPbList)
+        for (auto &pW : m_pPbList)
         {
-            pW.pPb->setStyleSheet(cPbNormalStyle);
+            pW.pPb->setProperty("navChecked", false);
+            pW.pPb->style()->unpolish(pW.pPb);
+            pW.pPb->style()->polish(pW.pPb);
             pW.pPb->setText(pW.text);
         }
-        m_pPbList[m_currentId].pPb->setStyleSheet(cPbCurrentStyle);
-        m_pPbList[m_currentId].pPb->setText(m_pPbList[m_currentId].text + "*");
+        auto *curr = m_pPbList[m_currentId].pPb;
+        curr->setProperty("navChecked", true);
+        curr->style()->unpolish(curr);
+        curr->style()->polish(curr);
+        curr->setText(m_pPbList[m_currentId].text + "*");
         emit sigCurrentId(oldId, m_currentId);
     }
 }

@@ -824,3 +824,27 @@ QTableWidget::item:hover:!selected {
     color: rgb(0, 0, 0);
     background-color: rgb(204, 232, 255);
 }
+
+/* Navigation bar buttons (Template steps) */
+QPushButton#NavigationBarBtn {
+    font-family: 'Microsoft YaHei';
+    font: 12px;
+    min-height: 28px;
+    padding: 4px 10px;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 6px;
+    color: rgb(240, 240, 240);
+    background-color: rgb(40, 40, 40);
+}
+
+QPushButton#NavigationBarBtn[navChecked="true"] {
+    background-color: rgb(70, 120, 70);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(90, 140, 90);
+}
+
+QPushButton#NavigationBarBtn:disabled {
+    color: rgb(120, 120, 120);
+    background-color: rgb(35, 38, 43);
+    border: 1px solid rgb(70, 70, 70);
+}

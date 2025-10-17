@@ -31,7 +31,6 @@ void CProjectEditWidget::init()
 {
     m_pStationWidget = new CStationWidget(this);
 
-    // 采用与 Workspace 一致的工具栏容器与对象名
     m_pToolBar = new QWidget(this);
     m_pToolBar->setObjectName(cStdWorkWidgetToolBar);
     m_pToolBar->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
@@ -47,7 +46,6 @@ void CProjectEditWidget::init()
             QToolButton *pToolButton = new QToolButton;
             pToolButton->setObjectName(cStdMainWidgetToolBtn);
             pToolButton->setFocusPolicy(Qt::ClickFocus);
-            // 与 Workspace 相同的风格：文本在图标下方，由全局 QSS 控制
             pToolButton->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
             pToolButton->setIcon(QIcon(p_icon));
             pToolButton->setText(p_name);
@@ -55,8 +53,7 @@ void CProjectEditWidget::init()
         };
 
         m_pSaveButton = getToolPb(tr("save"), cProjectEditSaveIcon);
-        connect(m_pSaveButton, &QToolButton::clicked, this, [this]()
-                {});
+        connect(m_pSaveButton, &QToolButton::clicked, this, [this](){});
 
         m_pSaveAsButton = getToolPb(tr("save as"), cProjectEditSaveAsIcon);
         connect(m_pSaveAsButton, &QToolButton::clicked, this, [this](){});
@@ -153,6 +150,5 @@ bool CProjectEditWidget::eventFilter(QObject *obj, QEvent *e)
 
 void CProjectEditWidget::paintEvent(QPaintEvent *event)
 {
-    // 使用全局样式，不再自绘背景，以匹配 Workspace 外观
     QWidget::paintEvent(event);
 }
